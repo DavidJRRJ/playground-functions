@@ -83,10 +83,20 @@ function decode(decodifica) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologia, nome) {
+  let listaArray = [];
+  tecnologia.sort();
+  if (tecnologia.length === 0) return('Vazio!');
+  for (let i = 0; i < tecnologia.length; i++){
+    let obj = {
+      tech: tecnologia[i],
+      name: nome
+    }
+    listaArray.push(obj);
+  }
+  return(listaArray);
 }
-
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "David"));
 module.exports = {
   calcArea,
   catAndMouse,

@@ -4,8 +4,10 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) return(false);
+  else if (lineA < Math.abs(lineC - lineB) || lineB < Math.abs(lineC - lineA) || lineC < Math.abs(lineB - lineA)) return(false);
+  else return(true);
 }
 
 // Desafio 13

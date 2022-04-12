@@ -61,13 +61,25 @@ function fizzBuzz(numArray) {
   }
   return(fizzArray);
 }
-//console.log(fizzBuzz([7, 9]));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+let codifica;
+function encode(codifica) {
+  codifica = codifica.replace(/a/g, '1');
+  codifica = codifica.replace(/e/g, '2');
+  codifica = codifica.replace(/i/g, '3');
+  codifica = codifica.replace(/o/g, '4');
+  codifica = codifica.replace(/u/g, '5');
+  return(codifica);
 }
-function decode() {
-  // seu código aqui
+let decodifica;
+function decode(decodifica) {
+  decodifica = decodifica.replace(/1/g, 'a');
+  decodifica = decodifica.replace(/2/g, 'e');
+  decodifica = decodifica.replace(/3/g, 'i');
+  decodifica = decodifica.replace(/4/g, 'o');
+  decodifica = decodifica.replace(/5/g, 'u');
+  return(decodifica);
 }
 
 // Desafio 10

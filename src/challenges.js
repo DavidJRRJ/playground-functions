@@ -18,8 +18,13 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrName) {
+  const first = arrName[0];
+  arrName.reverse();
+  const last = arrName[0]; 
+  let result = [];
+  result.push(last, first);
+  return(result.join(", "));
 }
 
 // Desafio 5

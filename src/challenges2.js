@@ -1,8 +1,29 @@
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let numTel = [...number];
+  let numC = ["(", numTel[0], numTel[1],")", " ", numTel[2], numTel[3], numTel[4], numTel[5], numTel[6], "-", numTel[7], numTel[8], numTel[9], numTel[10]];
+  let numAjustado;
+  if (numTel.length != 11){
+    return("Array com tamanho incorreto.");
+  }
+  else if (numTel.length == 11) {
+    for (let j = 0; j < numTel.length; j++){
+      let repNum = 0;
+      if (numTel[j] < 0 || numTel[j] > 9){
+        return("não é possível gerar um número de telefone com esses valores");
+      }   
+      for (let index = 0; index < numTel.length; index++){
+        if (numTel[j] === numTel[index]){       
+          repNum += 1;
+        }        
+      } 
+      if (repNum > 2){
+        return ("não é possível gerar um número de telefone com esses valores")
+      }   
+    }
+  } 
+  return numC.join('',',');
 }
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) return(false);
